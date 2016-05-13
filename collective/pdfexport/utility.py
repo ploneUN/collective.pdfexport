@@ -53,4 +53,4 @@ class PDFKitPDFConverter(grok.GlobalUtility):
             )
             return StringIO(out)
         except Exception:
-            return ''
+            return None

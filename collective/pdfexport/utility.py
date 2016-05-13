@@ -45,9 +45,12 @@ class PDFKitPDFConverter(grok.GlobalUtility):
     def convert(self, content, view=None):
         item = IPDFHTMLProvider(content)
         html = item.pdf_html(view=view)
-        out = pdfkit.from_string(html, 
-            False, 
-            options=self._options(), 
-            configuration=self.config
-        )
-        return StringIO(out)
+        try:
+            out = pdfkit.from_string(html, 
+                False, 
+                options=self._options(), 
+                configuration=self.config
+            )
+            return StringIO(out)
+        except Exception:
+            return ''

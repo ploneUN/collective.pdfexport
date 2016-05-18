@@ -1,5 +1,10 @@
 Changelog
 =========
+
+1.1dev1 - may 18, 2016
+------------------
+changed version for production
+
 1.0 - may 18, 2016
 ------------------
 initial release for production
